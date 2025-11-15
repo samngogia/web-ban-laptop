@@ -1,10 +1,10 @@
-package javaweb.banlaptop;
+package com.example.springWEB;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BanlaptopApplicationTests {
+class SpringWebApplicationTests {
 
 	@Test
 	void contextLoads() {
