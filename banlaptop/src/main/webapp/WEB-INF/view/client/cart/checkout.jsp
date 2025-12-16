@@ -1,326 +1,208 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-            <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-                <!DOCTYPE html>
-                <html lang="en">
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-                <head>
-                    <meta charset="UTF-8">
-                    <title>Checkout</title>
-                    <link rel="stylesheet" href="/">
-                    <style>
-                        * {
-                            box-sizing: border-box;
-                            margin: 0;
-                            padding: 0;
-                        }
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - Laptop Shop</title>
 
-                        html {
-                            font-size: 62.5%;
-                            /* 10/16 = 0.625 * 100 */
-                        }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
 
-                        body {
-                            background: url('https://images.pexels.com/photos/2876787/pexels-photo-2876787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-                            background-position: center;
-                            background-size: cover;
-                            backdrop-filter: blur(8px);
-                            color: #3c3c39;
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-                            display: flex;
-                            justify-content: center;
-                            height: 100vh;
-                            font-family: 'Monsterrat', sans-serif;
-                            position: relative;
-                            padding: 2rem 0;
-                        }
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-                        .checkout-container {
-                            /* background-color: red; */
-                            max-width: 120rem;
-                            height: 50rem;
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            justify-content: center;
-                            /* margin-bottom: 10rem; */
-                        }
+    <!-- Custom CSS -->
+    <link href="/css/client/style.css" rel="stylesheet">
 
-                        em {
-                            font-style: normal;
-                            font-weight: 700;
-                        }
+    <style>
+        .checkout-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/2876787/pexels-photo-2876787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-position: center;
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .product-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .summary-card {
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-checkout {
+            background-color: #4c616b;
+            color: white;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .btn-checkout:hover {
+            background-color: #5f7986;
+            color: white;
+        }
+    </style>
+</head>
+<body>
 
-                        hr {
-                            color: #fff;
-                            margin-bottom: 1.2rem;
-                        }
+<!-- Navbar (giống trang giỏ hàng) -->
+<jsp:include page="includes/navbar.jsp" />
 
-                        /* Left Side Of Container */
-                        .left-side {
-                            background: url('/images/product/1000s.jpg');
-                            background-position: center;
-                            background-size: cover;
-                            position: relative;
-                        }
+<!-- Page Header -->
+<div class="checkout-banner">
+    <h1 class="display-5 fw-bold">Xác Nhận Thanh Toán</h1>
+</div>
 
-                        .text-box {
-                            background: rgba(95, 121, 134, 0.8);
-                            width: 100%;
-                            padding: 1rem 2rem;
-                            position: absolute;
-                            bottom: 0;
-                        }
+<!-- Checkout Content -->
+<div class="container py-5">
+    <div class="row g-5">
+        <!-- Left: Order Summary -->
+        <div class="col-lg-7">
+            <div class="bg-white p-4 summary-card">
+                <h4 class="mb-4">Chi Tiết Đơn Hàng</h4>
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead class="table-light">
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Tên</th>
+                            <th>Giá</th>
+                            <th>Số Lượng</th>
+                            <th>Thành Tiền</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="item" items="${cartDetails}">
+                            <tr>
+                                <td>
+                                    <img src="/images/product/${item.products.image}"
+                                         class="product-img" alt="${item.products.name}">
+                                </td>
+                                <td class="fw-medium">${item.products.name}</td>
+                                <td><fmt:formatNumber value="${item.products.price}" type="currency" currencySymbol=""/> ₫</td>
+                                <td class="text-center">${item.quantity}</td>
+                                <td class="fw-bold">
+                                    <fmt:formatNumber value="${item.products.price * item.quantity}" type="currency" currencySymbol=""/> ₫
+                                </td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
 
-                        /* Left container text */
+                <hr>
 
-                        .home-heading {
-                            color: #e8e8e1;
-                            font-size: 3.2rem;
-                            font-weight: 700;
-                            line-height: 1;
-                            margin-bottom: 1rem;
-                        }
+                <div class="d-flex justify-content-between py-2">
+                    <span>Tạm tính</span>
+                    <strong><fmt:formatNumber value="${sums}" type="currency" currencySymbol=""/> ₫</strong>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                    <span>Chiết khấu</span>
+                    <span>0 ₫</span>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                    <span>Phí vận chuyển</span>
+                    <span>Miễn phí</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between py-3">
+                    <h5 class="fw-bold">Tổng cộng</h5>
+                    <h5 class="text-primary fw-bold">
+                        <fmt:formatNumber value="${sums}" type="currency" currencySymbol=""/> ₫
+                    </h5>
+                </div>
+                <div class="alert alert-info small">
+                    <i class="fas fa-truck me-2"></i>
+                    Hình thức thanh toán: <strong>Thanh toán khi nhận hàng (COD)</strong>
+                </div>
+            </div>
+        </div>
 
-                        .home-price {
-                            color: #aeae97;
-                            font-size: 2rem;
-                            margin-bottom: 1.2rem;
-                        }
+        <!-- Right: Shipping Info Form -->
+        <div class="col-lg-5">
+            <div class="bg-white p-4 summary-card">
+                <h4 class="mb-4">Thông Tin Nhận Hàng</h4>
 
-                        .home-desc {
-                            color: #e8e8e1;
-                            font-size: 1.2rem;
-                            line-height: 1.5;
-                            letter-spacing: 0.5px;
-                        }
+                <form:form action="/create/order" method="post" modelAttribute="UserInfRec" class="needs-validation" novalidate="true">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 
-                        /* Right Side of container */
+                    <div class="mb-3">
+                        <label class="form-label fw-medium">Họ và tên <span class="text-danger">*</span></label>
+                        <form:input path="receiverName" class="form-control" required="true" placeholder="Nguyễn Văn A"/>
+                        <form:errors path="receiverName" cssClass="text-danger small"/>
+                    </div>
 
-                        .right-side {
-                            background-color: #fff;
-                            padding: 1.8rem 3.2rem;
-                        }
+                    <div class="mb-3">
+                        <label class="form-label fw-medium">Số điện thoại <span class="text-danger">*</span></label>
+                        <form:input path="receiverPhone" class="form-control" required="true" placeholder="0901234567"/>
+                        <form:errors path="receiverPhone" cssClass="text-danger small"/>
+                    </div>
 
-                        .receipt {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 1rem;
-                            border-bottom: solid 1px;
-                            margin-bottom: 1rem;
-                        }
+                    <div class="mb-4">
+                        <label class="form-label fw-medium">Địa chỉ nhận hàng <span class="text-danger">*</span></label>
+                        <form:input path="receiverAddress" class="form-control" required="true"
+                                    placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"/>
+                        <form:errors path="receiverAddress" cssClass="text-danger small"/>
+                    </div>
 
-                        .receipt-heading {
-                            font-size: 1.6rem;
-                            text-align: left;
-                        }
+                    <button type="submit" class="btn btn-checkout w-100">
+                        <i class="fas fa-lock me-2"></i>
+                        Xác Nhận Đặt Hàng
+                    </button>
 
-                        .table {
-                            border-collapse: separate;
-                            border-spacing: 0 1.5rem;
-                            color: #64645f;
-                            font-size: 1.2rem;
-                            margin-bottom: 0.5rem;
-                            width: 100%;
-                        }
+                    <p class="text-center text-muted small mt-3">
+                        <i class="fas fa-shield-alt me-1"></i>
+                        Thông tin của bạn được bảo mật hoàn toàn
+                    </p>
+                </form:form>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        .total td {
-                            font-size: 1.4rem;
-                            font-weight: 700;
-                        }
+<!-- Footer -->
+<jsp:include page="includes/footer.jsp" />
 
-                        .price {
-                            text-align: end;
-                        }
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary rounded-circle back-to-top border-3" style="position: fixed; bottom: 20px; right: 20px; z-index: 99;">
+    <i class="fa fa-arrow-up"></i>
+</a>
 
-                        /* Payment Section */
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/client/main.js"></script>
 
-                        .payment-heading {
-                            font-size: 1.4rem;
-                            margin-bottom: 1rem;
-                        }
-
-                        .form-box {
-                            display: grid;
-                            grid-template-rows: 1fr;
-                            gap: 1.5rem;
-                        }
-
-                        .card-logo {
-                            font-size: 2rem;
-                        }
-
-                        .expires,
-                        .form-box label {
-                            font-size: 1.2rem;
-                            font-weight: 700;
-                        }
-
-                        .form-box input {
-                            font-family: inherit;
-                            font-size: 1.2rem;
-                            padding: 0.5rem;
-                            width: 100%;
-                        }
-
-                        .form-box select {
-                            padding: 0.5rem;
-                        }
-
-                        .form-box #cvv {
-                            width: 25%;
-                        }
-
-                        .cvv-info:link,
-                        .cvv-info:visited {
-                            color: inherit;
-                            text-decoration: underline;
-                        }
-
-                        .cvv-info:hover,
-                        .cvv-info:active {
-                            color: #5f7986;
-                            text-decoration: none;
-                        }
-
-                        .btn {
-                            background-color: #4c616b;
-                            border: none;
-                            border-radius: 8px;
-                            color: #eff2f3;
-                            font-size: 1.6rem;
-                            font-weight: 700;
-                            letter-spacing: 0.5px;
-                            margin-bottom: 1rem;
-                            padding: 1.5rem;
-                            cursor: pointer;
-                        }
-
-                        .btn:hover {
-                            background-color: #5f7986;
-                            transition: ease-out 0.1s;
-                        }
-
-                        .footer-text {
-                            font-size: 1rem;
-                            text-align: center;
-                        }
-
-                        .form-box *:focus {
-                            outline: none;
-                            box-shadow: 0 0 0 0.8rem rgba(139, 139, 107, 0.5);
-                            border-radius: 8px;
-                        }
-                    </style>
-
-                </head>
-
-                <body>
-                    <!-- partial:index.partial.html -->
-                    <!-- Font Awesome -->
-                    <script src="https://kit.fontawesome.com/bb515311f9.js" crossorigin="anonymous"></script>
-
-                    <title>Day 002 - Credit Card Checkout</title>
-
-                    <body style="display: flex; align-items: center;">
-                        <div class="checkout-container">
-                            <div class="left-side">
-                                <div class="text-box">
-                                    <h1 class="home-heading">Laptop Store</h1>
-                                    <p class="home-price"><em>Chỉ từ 8.500.000 </em>/ 1 máy</p>
-                                    <hr class="left-hr" />
-                                    <p class="home-desc"><em>Chúng tôi </em>hy vọng <em>bạn sẽ tìm thấy thứ mình thích
-                                            tại đây</em></p>
-
-                                </div>
-                            </div>
-
-                            <div class="right-side" style="width: 425px;">
-                                <div class="receipt">
-                                    <h2 class="receipt-heading">Xác Nhận Đặt Hàng</h2>
-                                    <div>
-                                        <table class="table">
-                                            <tr>
-                                                <td>Tạm Tính</td>
-                                                <!-- <td class="price">${totals}</td> -->
-                                                <td class="price">
-                                                    <fmt:formatNumber type="number" value="${sums}" />
-                                                    Vnd
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chiết Khấu</td>
-                                                <td class="price">0 Vnd</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Giảm Giá</td>
-                                                <td class="price">0 Vnd</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hình Thức Thanh Toán</td>
-                                                <td class="price">Thanh Toán Khi Nhận Hàng</td>
-                                            </tr>
-                                            <tr class="total">
-                                                <td>Thành Tiền</td>
-
-                                                <td class="price">
-                                                    <fmt:formatNumber type="number" value="${sums}" />
-                                                    Vnd
-                                                </td>
-
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <div class="payment-info">
-                                    <h3 class="payment-heading">Thông Tin Nhận Hàng</h3>
-                                    <form:form action="/create/order" method="post" modelAttribute="UserInfRec">
-                                        <div>
-                                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Họ Tên</label>
-                                            <div class="col-sm-10">
-                                                <form:input type="text" class="form-control"
-                                                    style="width: 68%; border: none; box-shadow: 1px 1px 2.5px grey;"
-                                                    path="receiverName" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group row" style="margin-top: 17px;">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Địa Chỉ</label>
-                                            <div class="col-sm-10">
-                                                <form:input type="text" class="form-control"
-                                                    style="width: 68%; border: none; box-shadow: 1px 1px 2.5px grey;"
-                                                    path="receiverAddress" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group row" style="margin-top: 17px;">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Số Điện
-                                                Thoại</label>
-                                            <div class="col-sm-10">
-                                                <form:input type="text" class="form-control"
-                                                    style="width: 68%; border: none; box-shadow: 1px 1px 2.5px grey;"
-                                                    path="receiverPhone" />
-                                            </div>
-                                        </div>
-
-                                        <button class="btn" type="submit" style="margin-top: 15px;">
-                                            <i class="fa-solid fa-lock"></i> Đặt Hàng
-                                        </button>
-                                    </form:form>
-
-                                    <p class="footer-text">
-                                        <i class="fa-solid fa-lock"></i>
-                                        Your credit card infomration is encrypted
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </body>
-                    <!-- partial -->
-
-                </body>
-
-                </html>
+<!-- Form Validation Bootstrap -->
+<script>
+    // Bootstrap form validation
+    (() => {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
+</body>
+</html>
