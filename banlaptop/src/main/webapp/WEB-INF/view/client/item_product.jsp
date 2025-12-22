@@ -107,7 +107,7 @@
                                     <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a
                                             href="#" class="text-white">Tien Hai, Thai Binh</a></small>
                                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                                            class="text-white">qlinhphan@gmail.com</a></small>
+                                            class="text-white">tungnguyen1766360@gmail.com</a></small>
                                 </div>
                                 <div class="top-link pe-2">
 
@@ -373,17 +373,17 @@
                                 <div class="owl-carousel vegetable-carousel justify-content-center">
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-6.jpg"
+                                            <img src="/images/product/laptop1.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Parsely</h4>
+                                            <h4>DELL</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -393,17 +393,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-1.jpg"
+                                            <img src="/images/product/laptop2.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Parsely</h4>
+                                            <h4>LENOVO</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -413,17 +413,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-3.png"
+                                            <img src="/images/product/macbook-air-1.jpg"
                                                 class="img-fluid w-100 rounded-top bg-light" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Banana</h4>
+                                            <h4>THINKPAD</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -433,17 +433,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-4.jpg"
+                                            <img src="/images/product/macbook-2.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Bell Papper</h4>
+                                            <h4>ACER</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -453,17 +453,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-5.jpg"
+                                            <img src="/images/product/macbook1.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Potatoes</h4>
+                                            <h4>ASUS</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -473,17 +473,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-6.jpg"
+                                            <img src="/images/product/asus-2.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Parsely</h4>
+                                            <h4>DELL</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -493,17 +493,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-5.jpg"
+                                            <img src="/images/product/asus-1.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Potatoes</h4>
+                                            <h4>LENOVO</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -513,17 +513,17 @@
                                     </div>
                                     <div class="border border-primary rounded position-relative vesitable-item">
                                         <div class="vesitable-img">
-                                            <img src="/images/product/vegetable-item-6.jpg"
+                                            <img src="/images/product/laptop1.jpg"
                                                 class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; right: 10px;">Vegetable</div>
+                                            style="top: 10px; right: 10px;">Hot</div>
                                         <div class="p-4 pb-0 rounded-bottom">
-                                            <h4>Parsely</h4>
+                                            <h4>ASUS</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
+                                                <p class="text-dark fs-5 fw-bold">  </p>
                                                 <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
