@@ -26,7 +26,7 @@ public class Products {
     @Column(columnDefinition = "MEDIUMTEXT")
     private String detailDes;
 
-    private String shortDes;
+    private String shortDes;//  cập nhật
     private long quantity; // lg hang con lai
     private long sold; // lg hang da ban
     private String factory; // nha sx
