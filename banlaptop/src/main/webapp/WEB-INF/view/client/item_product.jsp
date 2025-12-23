@@ -384,10 +384,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -404,10 +432,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -424,10 +480,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -444,10 +528,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -464,10 +576,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -484,10 +624,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -504,10 +672,38 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -524,10 +720,37 @@
                                                 incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold">  </p>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                                                                                        <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                             </div>
                                         </div>
                                     </div>

@@ -98,7 +98,7 @@
                                     <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a
                                             href="#" class="text-white">Tiền Hải, Thái Bình</a></small>
                                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                                            class="text-white">qlinhphan@gmail.com</a></small>
+                                            class="text-white">tungnguyen1766360@gmail.com</a></small>
                                 </div>
                                 <div class="top-link pe-2">
                                     <a href="#" class="text-white"><small class="text-white mx-2">Buy Like You
@@ -219,11 +219,6 @@
                     <!-- Single Page Header start -->
                     <div class="container-fluid page-header py-5">
                         <h1 class="text-center text-white display-6">Shop</h1>
-                        <ol class="breadcrumb justify-content-center mb-0">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item active text-white">Shop</li>
-                        </ol>
                     </div>
                     <!-- Single Page Header End -->
 
@@ -626,10 +621,38 @@
                                                                         <fmt:formatNumber type="number"
                                                                             value="${product.price}" />Vnd
                                                                     </p>
-                                                                    <a href="#"
-                                                                        class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                            class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                                        Add to cart</a>
+                                                                                                                                            <div
+                                                                            style="display: flex; justify-content: center; gap: 7px">
+                                                                            <form:form
+                                                                                action="/add-product-to-card/${product.id}"
+                                                                                method="post"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+                                                                                <div>
+                                                                                    <input type="hidden"
+                                                                                        name="${_csrf.parameterName}"
+                                                                                        value="${_csrf.token}" />
+                                                                                </div>
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">add
+                                                                                    to card</button>
+
+
+                                                                            </form:form>
+                                                                            <form
+                                                                                action="/detail/product/client/${product.id}"
+                                                                                method="get"
+                                                                                class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                                                style="margin-top: 17px; display: flex; justify-content: center; align-items: center;">
+
+                                                                                <button type="submit"
+                                                                                    class="fa fa-shopping-bag me-2 text-primary"
+                                                                                    style="border: none;">View Product
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -106,7 +106,7 @@
                                             href="https://www.google.com/maps/place/Ti%E1%BB%81n+H%E1%BA%A3i,+Ti%E1%BB%81n+H%E1%BA%A3i+District,+Thai+Binh/@20.4044091,106.5001131,15z/data=!3m1!4b1!4m6!3m5!1s0x3135f8c5b3919d0b:0x9ea9c50b834948b1!8m2!3d20.402609!4d106.5009617!16s%2Fg%2F122xl0yc?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"
                                             class="text-white">Tiền Hải, Thái Bình</a></small>
                                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                                            class="text-white">qlinhphan@gmail.com</a></small>
+                                            class="text-white">tungnguyen1766360@gmail.com</a></small>
                                 </div>
                                 <div class="top-link pe-2">
                                     <a href="#" class="text-white"><small class="text-white mx-2">Buy Like You
@@ -453,8 +453,7 @@
                                                                     <a href="#"
                                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                                             class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                                        Add to
-                                                                        cart</a>
+                                                                        Add to cart</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -481,8 +480,7 @@
                                                                     <a href="#"
                                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                                             class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                                        Add to
-                                                                        cart</a>
+                                                                        Add to cart</a>
                                                                 </div>
                                                             </div>
                                                         </div>
