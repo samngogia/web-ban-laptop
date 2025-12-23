@@ -22,12 +22,12 @@ public class feedBack {
     private String content;
     private Date date;
 
-    // n feed -> 1 user
+    
     @ManyToOne
     @JoinColumn(name = "user_id")
     private Users user;
 
-    // feed n -> 1 product
+    
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Products product;
